@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"name": "lua",
+			"path": "."
+		},
+		{
+			"path": "../../Downloads/Weather/Weather"
+		},
+		{
+			"path": "../new python Era"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "lua"
+	}
+}

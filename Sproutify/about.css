@@ -1,0 +1,440 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+h1, h2 {
+    text-align: center;
+    color: #ffffff;
+}
+
+p {
+    text-align: center;
+    line-height: 1.6;
+}
+
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Navbar container */
+/* Navbar container */
+header {
+    width: 100%; 
+    max-width: 100%;
+    padding-left: 100px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    z-index: 1000;
+    background-color: #333;
+    
+}
+
+
+header nav a{
+    color: #fff;
+    margin-right: 5px;
+    padding: 5px 10px;
+    font-size: 16px;
+    transition: 0.2s;
+    text-decoration: none;
+    
+}
+
+/* Active link style */
+nav a.active {
+    background-color: #74C69E;
+}
+
+/* Hover effect for links */
+nav a:hover {
+    background-color: #74C69E;
+}
+
+/* Dropdown container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown button */
+.dropbtn {
+    background-color: transparent;
+    color: white;
+    padding: 5px 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.861);
+    z-index: 1;
+}
+
+/* Dropdown links */
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-radius: 4px;
+    text-align: left;
+}
+
+/* Hover effect for dropdown links */
+.dropdown-content a:hover {
+    background-color: #74C69E;
+}
+
+/* Show the dropdown content on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Show hover effect on the dropdown button */
+.dropdown:hover .dropbtn {
+    background-color: #74C69E;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    header {
+        padding: 10px 20px;
+    }
+
+    nav a {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+}
+
+
+/* Hero Section (Header) */
+.hero {
+    background: url('Image/ForumTani.png') no-repeat center center/cover;
+    height: 50vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.hero .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(65, 62, 62, 0.5); /* Overlay effect */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.hero-content p {
+    font-size: 20px;
+    font-style: italic;
+}
+
+/* About Section */
+.about {
+    padding: 50px 20px;
+}
+
+.about .container {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.about p {
+    margin-bottom: 20px;
+}
+
+/* Header Section */
+
+.sdg-container{
+background-color: #b3b3b318;
+height: 900px;
+
+}
+.sdg-section {
+    max-width: 650px;
+    margin: 0 auto;
+    text-align: center;
+    
+    
+}
+
+.sdg-section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.sdg-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.sdg-item.reverse {
+    flex-direction: row-reverse;
+}
+
+.sdg-item img {
+    width: 300px;
+    height: auto;
+    border-radius: 8px;
+    margin-right: 20px;
+    box-shadow: 8px 45px 79px -15px rgba(0,0,0,0.66);
+    -webkit-box-shadow: 8px 45px 79px -15px rgba(0,0,0,0.66);
+    -moz-box-shadow: 8px 45px 79px -15px rgba(0,0,0,0.66);
+}
+
+.sdg-item.reverse img {
+    margin-left: 20px;
+    margin-right: 0;
+}
+
+.sdg-textR{
+        text-align: right;
+
+}
+.sdg-textR h3{
+    font-size: 20px;
+    color: #007b5e;
+    margin-bottom: 19px;
+}
+
+.sdg-textR p {
+    text-align:end;
+    font-size: 16px;
+    color: #555;
+}
+
+.sdg-text h3 {
+    font-size: 20px;
+    color: #007b5e;
+    margin-bottom: 19px;
+    text-align: justify;
+}
+
+.sdg-text p {
+    text-align: justify;
+    font-size: 16px;
+    color: #555;
+}
+
+@media (max-width: 768px) {
+    .sdg-item {
+        flex-direction: column;
+    }
+    .sdg-item img {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    .sdg-item.reverse img {
+        margin-left: 0;
+    }
+}
+
+
+/* Creator Section */
+.creator-section {
+     /* Mengurangi padding untuk jarak lebih dekat */
+    margin-top: 25px; /* Mengurangi jarak antar section */
+    text-align: center;
+}
+
+
+.creator-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Mengatur posisi card agar lebih rapat */
+    gap: 100px; /* Mengurangi jarak antar card untuk lebih dekat */
+    margin-bottom: 100px;
+    
+}
+
+
+.meetC{
+    color: #333;
+    padding-bottom: 40px;
+    font-size: 40px;
+}
+.creator-card {
+    width: 300px;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    box-shadow: 10px 17px 55px -5px rgba(0,0,0,0.82);
+-webkit-box-shadow: 10px 17px 55px -5px rgba(0,0,0,0.82);
+-moz-box-shadow: 10px 17px 55px -5px rgba(0,0,0,0.82);
+}
+
+.creator-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    
+}
+
+.creator-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.creator-info p {
+    text-align: justify;
+}
+
+.creator-card:hover img {
+    transform: scale(1.1);
+}
+
+.creator-card:hover .creator-info {
+    transform: translateY(0);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+
+    .meetC{
+        margin-top: 200px;
+    }
+    .creator-container {
+        flex-direction: column;
+        align-items: center;
+    
+        
+    }
+
+    .creator-card {
+        margin-bottom: 20px;
+    }
+}
+
+/* Footer styling */
+.footer {
+    background-color: #333; /* Warna latar belakang utama footer */
+    color: white;
+    font-size: 14px;
+    
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    gap: 20px; /* Menambah jarak antar kolom */
+    margin-top: 20px;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 220px; /* Menyesuaikan ukuran kolom lebih kecil */
+    margin-bottom: 30px;
+    margin-top: 30px;
+    
+}
+
+.footer-column h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #ffa500; /* Oranye untuk judul di footer */
+}
+
+.footer-column p, .footer-column ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: justify;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+    color: #ffa500;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px; /* Mengatur jarak antar ikon media sosial */
+}
+
+.social-icons a img {
+    width: 24px;
+    height: 24px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 20px;
+    background-color: #222; /* Warna lebih gelap untuk bagian bawah footer */
+    color: #ccc;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+/* Menghilangkan background setelah footer */
+body {
+    background-color: white; /* Warna latar belakang halaman setelah footer */
+}
+
+

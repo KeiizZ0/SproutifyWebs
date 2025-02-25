@@ -1,0 +1,610 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Gaya umum */
+h1, h2 {
+    text-align: center;
+    color: #ffffff;
+}
+
+p {
+    text-align: center;
+    line-height: 1.6;
+}
+
+/* Navbar container */
+header {
+    width: 100%; 
+    max-width: 100%;
+    padding-left: 100px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    z-index: 1000;
+    background-color: #333;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+/* Link styling in navbar */
+header nav a {
+    color: #fff;
+    margin-right: 5px;
+    padding: 5px 10px;
+    font-size: 16px;
+    transition: 0.2s;
+    text-decoration: none;
+}
+
+/* Active link style */
+nav a.active {
+    background-color: #74C69E;
+}
+
+/* Hover effect for links */
+nav a:hover {
+    background-color: #74C69E;
+}
+
+/* Dropdown container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown button */
+.dropbtn {
+    background-color: transparent;
+    color: white;
+    padding: 5px 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.861);
+    z-index: 1;
+}
+
+/* Dropdown links */
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-radius: 4px;
+    text-align: left;
+}
+
+/* Hover effect for dropdown links */
+.dropdown-content a:hover {
+    background-color: #74C69E;
+}
+
+/* Show the dropdown content on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Show hover effect on the dropdown button */
+.dropdown:hover .dropbtn {
+    background-color: #74C69E;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    header {
+        padding: 10px 20px;
+    }
+
+    nav a {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+}
+
+/* Kontainer untuk search bar berada di tengah halaman */
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px; /* Tambahkan margin yang cukup agar tidak bersentuhan dengan navbar */
+    gap: 20px; /* Lebih lebar antara tombol kembali, input search, dan tombol search */
+    padding: 20px; /* Tambahkan padding agar lebih proporsional */
+}
+
+/* Tombol kembali */
+.back-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #74C69E;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Tombol kembali hover */
+.back-button:hover {
+    background-color: #021c11;
+}
+
+/* Input box untuk search */
+.search-bar {
+    width: 400px; /* Sesuaikan agar lebih proporsional */
+    padding: 12px 20px; /* Lebih besar padding untuk tampilan yang lebih nyaman */
+    border: 1px solid #aaa;
+    border-radius: 50px;
+    font-size: 16px;
+    outline: none;
+    color: #666;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Tombol search */
+.search-button {
+    padding: 12px 25px; /* Lebih besar padding untuk kesesuaian dengan input box */
+    background-color: #74C69E;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Tombol search hover */
+.search-button:hover {
+    background-color: #58a684;
+}
+
+/* Card container with horizontal layout using flexbox */
+.card-container {
+    display: flex;
+    justify-content: center; /* Centers the cards horizontally */
+    align-items: center; /* Centers the cards vertically */
+    gap: 50px; /* Space between each card */
+    padding: 20px; /* Padding around the entire container */
+    margin: 30px auto; /* Centers the entire container horizontally */
+    max-width: 1100px; /* Maximum width for the container */
+    flex-wrap: nowrap; /* Keeps the cards in a single line without wrapping */
+    overflow-x: auto; /* Adds horizontal scrolling if the cards overflow */
+}
+
+/* Card styling */
+.card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    min-width: 300px;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.card p{
+    text-align: justify;
+}
+
+.card img {
+    width: auto;
+    height: auto;
+    display: block;
+}
+
+.card-content {
+    padding: 20px;
+    text-align: left;
+}
+
+.card h3 {
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+.card p {
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.card button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.card button:hover {
+    background-color: #555;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+/* Responsive design untuk smaller screens */
+@media (max-width: 768px) {
+    .card-container {
+        flex-wrap: wrap;
+    }
+
+    .card {
+        width: 100%;
+        min-width: unset;
+    }
+}
+
+/* Modal styling */
+/* Modal styling */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1001;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark background with transparency */
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease; /* Smooth fade-in */
+}
+
+.modal.show {
+    display: flex; /* Show modal when class 'show' is added */
+    opacity: 1; /* Fade in the background */
+}
+
+/* Modal content (with animation) */
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 800px;
+    text-align: left;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: flex-start;
+    transform: scale(0.7); /* Start with smaller size */
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth zoom-in and fade-in */
+}
+
+.modal-content.show {
+    transform: scale(1); /* Zoom to normal size */
+    opacity: 1; /* Show modal content */
+}
+
+/* Styling for image and content side by side */
+.modal-image {
+    width: 40%;
+    height: 400px;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.modal-details {
+    width: 60%;
+}
+
+.modal h3 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.modal ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.modal ul li {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #555;
+}
+
+.modal ul li strong {
+    color: #74C69E;
+}
+
+/* Close button styling */
+.close {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover, .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Responsive adjustments for modal on smaller screens */
+@media (max-width: 768px) {
+    .modal-content {
+        flex-direction: column;
+    }
+
+    .modal-image {
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    .modal-details {
+        width: 100%;
+    }
+}
+
+/* Styling for the statistics section */
+.stats-section {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.stats-section h2 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* Container for stat cards */
+.stats-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+/* Individual stat card */
+.stat-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+    width: 250px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-card i {
+    font-size: 50px;
+    color: #74C69E;
+    margin-bottom: 20px;
+}
+
+.stat-card h3 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.stat-card p {
+    font-size: 16px;
+    color: #777;
+}
+
+/* Hover effect for stat card */
+.stat-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive styling for smaller screens */
+@media (max-width: 768px) {
+    .stats-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .stat-card {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+}
+
+/* Container for testimonials */
+#testimonials {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center; /* Pusatkan container */
+    align-items: flex-start; /* Atur item sejajar di bagian atas */
+    gap: 40px; /* Spasi antara testimoni */
+    flex-wrap: wrap; /* Agar responsif saat layar lebih kecil */
+}
+
+.testimonial {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 450px; /* Lebar maksimum untuk card */
+    text-align: left;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 300px; /* Tambahkan tinggi minimum agar testimoni konsisten */
+}
+
+.quote-icon {
+    font-size: 30px;
+    color: #74C69E;
+    position: absolute;
+    top: 10px;
+    left: 20px;
+}
+
+.testimonial p {
+    font-size: 16px;
+    color: #333;
+    margin-top: 30px;
+    line-height: 1.5; /* Buat line-height sama untuk konsistensi */
+}
+
+.testimonial a {
+    color: #6a0dad;
+    text-decoration: none;
+}
+
+.testimonial a:hover {
+    text-decoration: underline;
+}
+
+.client-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: auto; /* Buat bagian bawah card sejajar */
+}
+
+.client-info img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.client-info h4 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 5px; /* Atur margin bawah agar tidak terlalu besar */
+}
+
+.stars {
+    color: #FFD700;
+    font-size: 14px; /* Pastikan ukuran bintang sama */
+}
+
+/* Responsive: Atur ulang card pada ukuran layar lebih kecil */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Testimoni dalam satu kolom */
+    }
+
+    .testimonial {
+        max-width: 90%; /* Lebar card menyesuaikan layar */
+    }
+}
+
+/* Footer styling */
+.footer {
+    background-color: #333; /* Warna latar belakang utama footer */
+    color: white;
+    font-size: 14px;
+    
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    gap: 20px; /* Menambah jarak antar kolom */
+    margin-top: 20px;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 220px; /* Menyesuaikan ukuran kolom lebih kecil */
+    margin-bottom: 30px;
+    margin-top: 30px;
+    
+}
+
+.footer-column h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #ffa500; /* Oranye untuk judul di footer */
+}
+
+.footer-column p, .footer-column ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: justify;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+    color: #ffa500;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px; /* Mengatur jarak antar ikon media sosial */
+}
+
+.social-icons a img {
+    width: 24px;
+    height: 24px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 20px;
+    background-color: #222; /* Warna lebih gelap untuk bagian bawah footer */
+    color: #ccc;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+/* Menghilangkan background setelah footer */
+body {
+    background-color: white; /* Warna latar belakang halaman setelah footer */
+}
+
+

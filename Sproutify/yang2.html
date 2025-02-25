@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+    <!--Navigation Bar-->
+    <header>
+        <nav class="top-bar">
+
+        </nav>
+    </header>   
+
+    <!--Main Content-->
+    <div class="main-content">
+        <div class="hamburger" id="hamburger"> &#9776;</div>
+        
+        <!--map area-->
+        <div class="map">
+            <img src="Image/istockphoto-1015433542-612x612.jpg" alt="Map" class="map-image">
+            <div class="dotted-rectangle"></div>
+        
+            <!-- Circle with border -->
+            <div class="circle"></div>
+            
+            <!--overlay-->
+            <div class="data-overlay">
+                <ul>
+                    <li id="area-text"><i class="fas fa-map-marker-alt"></i>Padi </li>
+                    <hr>
+                    <li id="temperature">
+                        <i class="fas fa-thermometer-half"></i> Temperature
+                        <div class="info">
+                            <div class="percentage-wrapper">
+                                <span class="percentage" id="temperature-value">22</span>
+                                <span class="unit">°C</span>
+                            </div>
+                            <span class="small-text" id="temperature-text">Normal</span>
+                        </div>
+                    </li>                    
+                    <hr>
+                    <li id="soil">
+                        <i class="fas fa-seedling"></i> Soil
+                        <div class="info">
+                            <div class="percentage-wrapper">
+                                <span class="percentage" id="soil-value">93</span>
+                                <span class="unit">%</span>
+                            </div>
+                            <span class="small-text" id="soil-text">Tinggi</span>
+                        </div>
+                    </li>
+                    <hr>
+                    <li id="water">
+                        <i class="fas fa-water"></i> Water
+                        <div class="info">
+                            <div class="percentage-wrapper">
+                                <span class="percentage" id="water-value">75</span>
+                                <span class="unit">%</span>
+                            </div>
+                            <span class="small-text" id="water-text">Cukup</span>
+                        </div>
+                    </li>
+                    <hr>
+                    <li id="water-plants">
+                        <i class="fas fa-leaf"></i> Water in Plants
+                        <div class="info">
+                            <div class="percentage-wrapper">
+                                <span class="percentage" id="water-plants-value">60</span>
+                                <span class="unit">%</span>
+                            </div>
+                            <span class="small-text" id="water-plants-text">Baik</span>
+                        </div>
+                    </li>
+                    <hr>
+                    <li id="nutrition">
+                        <i class="fas fa-apple-alt"></i> Nutrition
+                        <div class="info">
+                            
+                            <span class="percentage" id="nutrition-value">High</span>
+                            <span class="small-text" id="nutrition-text">Optimal</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!--right sidebar-->
+        <div class="sidebar" id="sidebar">
+            
+            <div class="layer">
+                <p>Map Layers & data</p>
+                
+                <div class="container">
+                    <div class="type">
+                        <p>Type</p>
+                        <select name="" id="isi">
+                            <option value="Padi">Padi</option>
+                            <option value="Jagung">Jagung</option>
+                            <option value="Gandum">Gandum</option>
+                        </select>
+                    </div>
+            
+                    <div class="zat">
+                        <p>Substance Needs</p>
+                        <input type="text" id="input" placeholder="Enter value...">
+                        <div class="unit-container">
+                            <a href="#" class="active">kg/ha</a>
+                            <a href="#">l/ha</a>
+                        </div>
+                    </div>
+            
+                    <div class="zone">
+                        <p>Zone</p>
+                        <div class="zone-wrapper">
+                            <ul class="zones">
+                                <li><a href="#" id="zone-1" class="active">1</a></li>
+                                <li><a href="#" id="zone-2">2</a></li>
+                                <li><a href="#" id="zone-3">3</a></li>
+                                <li><a href="#" id="zone-4">4</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+        </div>
+        
+
+        <!--diagrams-->
+        <div class="chart-container">
+            <div class="header">
+                <div class="title">Growth</div>
+                <div class="timeframe">
+                    <button id="week-btn" class="active">W</button>
+                    <button id="month-btn">M</button>
+                    <button id="year-btn">Y</button>
+                </div>
+            </div>
+    
+            <div class="growth-rate">
+                <span class="rate">0.75</span>
+                <span class="arrow">⬇</span>
+            </div>
+    
+            <div class="bar-chart" id="bar-chart"></div>
+    
+            <div class="footer">
+                <span id="startDate">July 24</span>
+                <span id="endDate">July 30</span>
+            </div>
+        </div>
+
+    </div>
+    <script src="kTanah.js"></script>
+</body>
+</html>

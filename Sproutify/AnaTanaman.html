@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analisis Kebutuhan</title>
+    <link rel="stylesheet" href="AnaTanaman.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <div class="dropdown">
+                <a href="#" class="dropbtn" class="active" >Services</a>
+                <div class="dropdown-content">
+                    <a href="forum.html">Forum TaniMuda</a>
+                    <a href="Weather.html">Pola Cuaca</a>
+                    <a href="yang2.html">Pemantauan Kelembapan</a>
+                    <a href="AnaTanaman.html">Analisis Kebutuhan Tanaman</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Search Bar -->
+    <div class="search-container">
+        <!-- Tombol kembali -->
+        <button class="back-button" onclick="goBack()">
+            <i class="fas fa-arrow-left"></i>
+        </button>
+        
+        <!-- Kolom Pencarian -->
+        <input type="text" id="searchInput" placeholder="Cari tanaman..." class="search-bar">
+        
+        <!-- Tombol Search -->
+        <button class="search-button" onclick="searchCard()">
+            Search
+        </button>
+    </div>
+    
+    <!-- Card Container -->
+    <div id="cardContainer" class="card-container">
+        <!-- Existing cards (Jagung, Padi, Gandum) -->
+        <div class="card" data-category="jagung">
+            <img src="Image/Jagung.jpg" alt="Jagung">
+            <div class="card-content">
+                <h3>Jagung</h3>
+                <p>Jagung merupakan tanaman yang banyak dibudidayakan di berbagai negara.</p>
+                <button class="learn-more-btn" onclick="openModal('modalJagung')">Pelajari Lebih Lanjut</button>
+            </div>
+        </div>
+
+        <div class="card" data-category="padi">
+            <img src="Image/padi1.png" alt="Padi">
+            <div class="card-content">
+                <h3>Padi</h3>
+                <p>Padi adalah sumber utama karbohidrat bagi mayoritas penduduk dunia.</p>
+                <button class="learn-more-btn" onclick="openModal('modalPadi')">Pelajari Lebih Lanjut</button>
+            </div>
+        </div>
+
+        <div class="card" data-category="gandum">
+            <img src="https://www.greeners.co/wp-content/uploads/2017/09/Flora-Tanaman-Gandum-Tanaman-Penghasil-Roti-dari-Dataran-Tinggi.jpg" alt="Gandum">
+            <div class="card-content">
+                <h3>Gandum</h3>
+                <p>Gandum adalah salah satu tanaman serealia yang paling penting di dunia.</p>
+                <button class="learn-more-btn" onclick="openModal('modalGandum')">Pelajari Lebih Lanjut</button>
+            </div>
+        </div>
+
+
+    </div>
+
+    <!-- Modal for Jagung -->
+    <div id="modalJagung" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modalJagung')">&times;</span>
+            <img src="Image/Jagung2.webp" alt="Jagung" class="modal-image">
+            <div class="modal-details">
+                <h3>Kebutuhan Tanaman Jagung</h3>
+                <ul>
+                    <li><strong>Air:</strong> Moderat, membutuhkan penyiraman rutin.</li>
+                    <li><strong>Pupuk:</strong> Nitrogen tinggi, pupuk organik.</li>
+                    <li><strong>Cahaya:</strong> Full sun (8 jam/hari).</li>
+                    <li><strong>Suhu Ideal:</strong> 18°C - 24°C.</li>
+                    <li><strong>Jenis Tanah:</strong> Lempung berpasir, subur.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Padi -->
+    <div id="modalPadi" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modalPadi')">&times;</span>
+            <img src="Image/padi.jpg" alt="Padi" class="modal-image">
+            <div class="modal-details">
+                <h3>Kebutuhan Tanaman Padi</h3>
+                <ul>
+                    <li><strong>Air:</strong> Tinggi, lahan berair atau sawah.</li>
+                    <li><strong>Pupuk:</strong> Pupuk organik, nitrogen tinggi.</li>
+                    <li><strong>Cahaya:</strong> Sinar matahari penuh.</li>
+                    <li><strong>Suhu Ideal:</strong> 20°C - 35°C.</li>
+                    <li><strong>Jenis Tanah:</strong> Tanah liat, subur, selalu basah.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Gandum -->
+    <div id="modalGandum" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modalGandum')">&times;</span>
+            <img src="Image/Gandum2.jpg" alt="Gandum" class="modal-image">
+            <div class="modal-details">
+                <h3>Kebutuhan Tanaman Gandum</h3>
+                <ul>
+                    <li><strong>Air:</strong> Rendah sampai moderat, curah hujan sedang.</li>
+                    <li><strong>Pupuk:</strong> Fosfor dan kalium tinggi.</li>
+                    <li><strong>Cahaya:</strong> Sinar matahari penuh.</li>
+                    <li><strong>Suhu Ideal:</strong> 15°C - 25°C.</li>
+                    <li><strong>Jenis Tanah:</strong> Tanah lempung yang kering.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <section id="statistics" class="stats-section">
+        <h2>Bukti Keberhasilan Program Kami</h2>
+        
+        <div class="stats-container">
+            <!-- Stat 1: Petani Terbantu -->
+            <div class="stat-card">
+                <i class="fas fa-seedling"></i>
+                <h3>100+</h3>
+                <p>Petani di Indonesia Terbantu</p>
+            </div>
+    
+            <!-- Stat 2: Lahan Pertanian yang Terlindungi -->
+            <div class="stat-card">
+                <i class="fas fa-tractor"></i>
+                <h3>200+</h3>
+                <p>Lahan Pertanian Terlindungi</p>
+            </div>
+    
+            <!-- Stat 3: Tanaman yang Terdampak Positif -->
+            <div class="stat-card">
+                <i class="fas fa-leaf"></i>
+                <h3>500+</h3>
+                <p>Tanaman yang Terdampak Positif</p>
+            </div>
+    
+            <!-- Stat 4: Wilayah yang Dicakup -->
+            <div class="stat-card">
+                <i class="fas fa-map-marker-alt"></i>
+                <h3>50+</h3>
+                <p>Wilayah yang Dicakup</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials">
+        <div class="container">
+            <!-- Testimonial 1 -->
+            <div class="testimonial">
+                <div class="quote-icon">
+                    <i class="fas fa-quote-left"></i>
+                </div>
+                <p>
+                    "Program ini sangat membantu meningkatkan hasil panen saya. Tanaman lebih sehat dan kualitas tanah semakin baik... 
+                    <a href="#">Read more</a>"
+                </p>
+                <div class="client-info">
+                    <img src="https://static.vecteezy.com/system/resources/thumbnails/007/209/020/small/close-up-shot-of-happy-dark-skinned-afro-american-woman-laughs-positively-being-in-good-mood-dressed-in-black-casual-clothes-isolated-on-grey-background-human-emotions-and-feeligs-concept-photo.jpg" alt="Client A">
+                    <h4>Masha Citra</h4>
+                    <div class="stars">
+                        ★★★★★
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Testimonial 2 -->
+            <div class="testimonial">
+                <div class="quote-icon">
+                    <i class="fas fa-quote-left"></i>
+                </div>
+                <p>
+                    "Dengan bantuan analisis kebutuhan tanaman, saya bisa mengoptimalkan penggunaan pupuk dan air untuk hasil yang maksimal... 
+                    <a href="#">Read more</a>"
+                </p>
+                <div class="client-info">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQBFy0j_72yEKBKNRbPbCzxfNxq1H9Y57ygg&s" alt="Client B">
+                    <h4>Violina .S</h4>
+                    <div class="stars">
+                        ★★★★★
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Tentang Kami</h3>
+                <p>Kami adalah Sproutify membantu dalam kebutuhan agrikultur menjadi lebih efisien berdasarkan data yang ada, dan meningkatkan produktivitas bagi para petani</p>
+            </div>
+    
+            <div class="footer-column">
+                <h3>Navigasi</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">Layanan</a></li>
+                    <li><a href="about.html">Tentang</a></li>
+                    
+                </ul>
+            </div>
+    
+            <div class="footer-column">
+                <h3>Kontak</h3>
+                <p>Email: info@example.com</p>
+                <p>Telepon: +62 123 4567 890</p>
+                <p>Alamat: Jakarta, Indonesia</p>
+            </div>
+    
+            <div class="footer-column">
+                <h3>Ikuti Kami</h3>
+                <div class="social-icons">
+                    <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook"></a>
+                    <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Logo_of_Twitter.svg/1245px-Logo_of_Twitter.svg.png" alt="Twitter"></a>
+                    <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/1024px-Instagram_logo_2022.svg.png" alt="Instagram"></a>
+                    <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn"></a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="footer-bottom">
+            <p>&copy; 2024 Perusahaan Anda. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    
+    
+
+    <!-- JavaScript for modal and search functionality -->
+    <script src="AnaTanaman.js"></script>
+</body>
+</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forum Diskusi</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../forum.css">
+    <style>
+        /* Custom style to add margin between answer section and sidebar */
+        .answer {
+            margin-right: 1px; /* Add space between answers and sidebar */
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="">Forum Diskusi</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Tags</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Ask Question</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container mt-5">
+        <div class="row">
+            <!-- Kolom Utama -->
+            <div class="col-md-9">
+                <!-- Pertanyaan Utama -->
+                <div class="card mb-4 answers">
+                    <div class="card-body">
+                        <h2 class="card-title">Mencoba Teknologi Baru</h2>
+                        <p class="card-text">Guys, ada yang udah coba teknologi baru buat bertani belum? Kira-kira worth it nggak sih?</p>
+                        <p class="text-muted ib">Diajukan oleh</p>
+                        <strong class="usr-name ib text-muted">misakiizz
+                            <div class="usr-info">
+                                <img src="images/user.png" class="ib">
+                                <h4 class="ib">Misaki</h4>
+                                <h6>Petaneers</h6>
+                                <p class="text-muted">Hai, saya petani baru yang sedang belajar bikin kebun sendiri! Perjuangan demi makanan sehat dan enak, yuk ikuti perjalanan seru ini!</p>
+                            </div>
+                        </strong>
+                        <p class="text-muted ib">pada <em>28 September 2024</em></p>
+                    </div>
+                </div>
+
+                <!-- Daftar Jawaban -->
+                <h3 class="mb-3">Jawaban</h3>
+                <div id="answers">
+                    <!-- Jawaban 1 -->
+                    <div class="answer card mb-4 anim">
+                        <div class="card-body">
+                            <p class="answer-text">Aku baru coba pakai drone buat semprot hama, cuy! Keren sih, nggak perlu cape-cape jalanin lahan yang luas, tinggal terbangin aja. Hasilnya juga lebih merata. Tapi kekurangannya, drone itu lumayan mahal, jadi buat yang lahan kecil, mungkin biayanya agak berat. Kalau punya lahan luas, worth it banget deh!</p>
+                            <p class="text-muted ib">Dijawab oleh</p>
+                            <strong class="usr-name ib text-muted">pohonPalem
+                                <div class="usr-info">
+                                    <img src="images/user.png" class="ib">
+                                    <h4 class="ib">Cold Palmer</h4>
+                                    <h6 style="color: rgb(33, 186, 33);">Petani Lokal</h6>
+                                    <p class="text-muted">Petani newbie yang excited banget buat belajar! Setiap hari di ladang adalah pelajaran baru, dan aku siap mencobanya!</p>
+                                </div>
+                            </strong>
+                            <p class="text-muted ib">pada <em>28 September 2024</em></p><br>
+                            <div class="answer-meta">
+                                <button class="upvote btn btn-outline-success btn-sm">Upvote</button>
+                                <span class="votess badge badge-secondary ml-2">22 votes</span>
+                                <button class="btn btn-link reply-btn">Reply</button>
+                            </div>
+                            <div class="reply-section mt-2" style="display: none;">
+                                <textarea class="form-control mb-2" rows="2" placeholder="Add Replies..."></textarea>
+                                <button class="btn btn-primary btn-sm submit-reply">Submit</button>
+                            </div>
+                            <div class="replies mt-3"></div>
+                        </div>
+                    </div>
+
+                    <!-- Jawaban 2 -->
+                    <div class="answer card mb-4 anim">
+                        <div class="card-body">
+                            <p class="answer-text">Gue coba pake sensor tanah digital nih, buat cek kelembaban sama nutrisi tanah. Lebih akurat daripada ngira-ngira manual, jadi tanaman bisa dapet air dan pupuk pas banget. Kekurangannya, instalasi awalnya ribet dan butuh modal lumayan, tapi setelah terpasang, ngehemat waktu dan hasil tanam jadi lebih maksimal. Teknologi ini bagus buat yang fokus ke hasil jangka panjang.</p>
+                            <p class="text-muted ib">Dijawab oleh</p>
+                            <strong class="usr-name ib text-muted">aripp
+                                <div class="usr-info">
+                                    <img src="images/user.png" class="ib">
+                                    <h4 class="ib">Arif M</h4>
+                                    <h6 class="text-bold" style="color: rgb(33, 133, 33);">Petani JAGO</h6>
+                                    <p class="text-muted">Petani berpengalaman yang mencintai setiap detik di ladang! Mari kita tumbuh bersama!</p>
+                                </div>
+                            </strong>
+                            <p class="text-muted ib">pada <em>28 September 2024</em></p><br>
+                            <div class="answer-meta">
+                                <button class="upvote btn btn-outline-success btn-sm">Upvote</button>
+                                <span class="votess badge badge-secondary ml-2">31 votes</span>
+                                <button class="btn btn-link reply-btn">Reply</button>
+                            </div>
+                            <div class="reply-section mt-2" style="display: none;">
+                                <textarea class="form-control mb-2" rows="2" placeholder="Add Replies..."></textarea>
+                                <button class="btn btn-primary btn-sm submit-reply">Submit</button>
+                            </div>
+                            <div class="replies mt-3"></div>
+                        </div>
+                    </div>
+
+                    <div class="answer card mb-4 anim">
+                        <div class="card-body">
+                            <p class="answer-text">Baru pake irigasi otomatis, bro! Jadi, nggak perlu bolak-balik ke sawah buat siram, air bisa ngalir otomatis sesuai jadwal. Lebih efisien, apalagi kalo kamu sibuk. Tapi, kalau sistemnya rusak, perbaikannya lumayan mahal. Jadi, pastikan sering dicek biar nggak ada masalah tiba-tiba.</p>
+                            <p class="text-muted ib">Dijawab oleh</p>
+                            <strong class="usr-name ib text-muted">eeOnee
+                                <div class="usr-info">
+                                    <img src="images/user.png" class="ib">
+                                    <h4 class="ib">Iwan K.</h4>
+                                    <h6 class="text-bold" style="color: rgb(33, 133, 33);">Petani JAGO</h6>
+                                    <p class="text-muted">Petani yang udah lama berkecimpung di dunia pertanian! Setiap tanaman adalah sahabat. Siap berbagi pengalaman dan inspirasi!</p>
+                                </div>
+                            </strong>
+                            <p class="text-muted ib">pada <em>28 September 2024</em></p><br>
+                            <div class="answer-meta">
+                                <button class="upvote btn btn-outline-success btn-sm">Upvote</button>
+                                <span class="votess badge badge-secondary ml-2">32 votes</span>
+                                <button class="btn btn-link reply-btn">Reply</button>
+                            </div>
+                            <div class="reply-section mt-2" style="display: none;">
+                                <textarea class="form-control mb-2" rows="2" placeholder="Add Replies..."></textarea>
+                                <button class="btn btn-primary btn-sm submit-reply">Submit</button>
+                            </div>
+                            <div class="replies mt-3"></div>
+                        </div>
+                    </div>
+
+                    <div class="answer card mb-4 anim">
+                        <div class="card-body">
+                            <p class="answer-text">Pake sensor cuaca pintar buat prediksi cuaca lebih akurat. Ini bantu banget buat nentuin kapan harus nanam atau panen. Kurangnya, ya lagi-lagi soal harga, bro. Tapi buat yang sering ketergantungan sama cuaca, ini bisa jadi investasi yang bagus buat jangka panjang.</p>
+                            <p class="text-muted ib">Dijawab oleh</p>
+                            <strong class="usr-name ib text-muted">Kuzli
+                                <div class="usr-info">
+                                    <img src="images/user.png" class="ib">
+                                    <h4 class="ib">Kusmoro eReR</h4>
+                                    <h6 class="text-bold" style="color: rgb(33, 133, 33);">Petani JAGO</h6>
+                                    <p class="text-muted">Pengembara di dunia pertanian selama bertahun-tahun! Yuk, bareng-bareng kita ciptakan dunia yang lebih hijau!</p>
+                                </div>
+                            </strong>
+                            <p class="text-muted ib">pada <em>28 September 2024</em></p><br>
+                            <div class="answer-meta">
+                                <button class="upvote btn btn-outline-success btn-sm">Upvote</button>
+                                <span class="votess badge badge-secondary ml-2">48 votes</span>
+                                <button class="btn btn-link reply-btn">Reply</button>
+                            </div>
+                            <div class="reply-section mt-2" style="display: none;">
+                                <textarea class="form-control mb-2" rows="2" placeholder="Add Replies..."></textarea>
+                                <button class="btn btn-primary btn-sm submit-reply">Submit</button>
+                            </div>
+                            <div class="replies mt-3"></div>
+                        </div>
+                    </div>
+
+                </div>
+                
+                <!-- Form Jawaban Baru -->
+                <div class="card mt-4 answers">
+                    <div class="card-body">
+                        <h5>Your Answer</h5>
+                        <textarea id="answerInput" class="form-control mb-3" rows="3" placeholder="Add Answers..."></textarea>
+                        <button id="submitAnswer" class="btn btn-primary">Submit</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="col-md-3 sidebar">
+                <!-- Popular Tags -->
+                <div class="sidebar-section mb-4 anim">
+                    <h5 class="sidebar-title"><i class="bi bi-tags-fill"></i> Related Tag</h5>
+                    <hr class="divider">
+                    <div class="tags">
+                        <span class="tag-badge"><i class="bi bi-tag-fill"></i> teknologi-baru</span>
+                        <span class="tag-badge"><i class="bi bi-tag-fill"></i> inovasi</span>
+                        <span class="tag-badge"><i class="bi bi-tag-fill"></i> smart-farming</span>
+                    </div>
+                </div>
+            
+                <!-- Trending Questions -->
+                <div class="sidebar-section mb-4 anim">
+                    <h5 class="sidebar-title"><i class="bi bi-fire"></i> Trending Questions</h5>
+                    <hr class="divider">
+                    <ul class="list-unstyled">
+                        <li class="anim"><i class="bi bi-chat-right-dots-fill"></i> <a href="disc5.html">Pengalaman Baru dalam Bertani</a></li>
+                        <li class="anim"><i class="bi bi-chat-right-dots-fill"></i> <a href="disc6.html">Teknologi Meningkatkan Hasil Tani</a></li>
+                        <li class="anim"><i class="bi bi-chat-right-dots-fill"></i> <a href="disc4.html">Mencoba Teknologi Baru</a></li>
+                    </ul>
+                </div>
+
+                <!-- Most Active Users -->
+                <div class="sidebar-section mb-4 anim">
+                    <h5 class="sidebar-title anim"><i class="bi bi-person-fill anim"></i> Related Questions</h5>
+                    <hr class="divider">
+                    <ul class="list-unstyled">
+                        <li class="anim"><i class="bi bi-chat-right-dots-fill"></i> <a href="disc6.html">Teknologi Meningkatkan Hasil Tani</a></li>
+                        <li class="anim"><i class="bi bi-chat-right-dots-fill"></i> <a href="disc1.html">Bagaimana Cara Mulai Menggunakan Drone di Lahan Pertanian?</a></li>
+                        <li class="anim"><i class="bi bi-chat-right-dots-fill"></i> <a href="disc5.html">Pengalaman Baru dalam Bertani</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.js/bootstrap.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
