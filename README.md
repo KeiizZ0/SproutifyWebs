@@ -3,6 +3,6 @@ Sebuah Frontend Website untuk membantu para petani untuk menganalisa pertanian m
 
 # Proyek Saya
 
-Ini adalah proyek saya, dan berikut adalah video demo yang menjelaskan lebih detail.
+Ini adalah proyek saya, dan berikut adalah gambar terkait.
 
-![Deskripsi Gambar](Images/https://github.com/KeiizZ0/SproutifyWebs/blob/main/Images/Screenshot%202025-02-25%20082920.png)
+![Deskripsi Gambar](Images/Screenshot%202025-02-25%20082920.png)
